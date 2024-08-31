@@ -77,16 +77,16 @@ elif selected == "Prediction":
 
     if submit_button:
         # Prepare data to send to FastAPI
-        player_data = {
-            "Provider": provider,
-            "Level": level,
-            "Type": type_,
-           "Duration_Weeks": duration_weeks
+        cors_data = {
+            "provider": provider,
+            "level": level,
+            "type": type_,
+           "duration_Weeks": duration_weeks
         }
 
         try:
             # Send data to FastAPI
-            response = requests.post("https://api-project-0j0c.onrender.com/predict/", json=player_data)
+            response = requests.post("https://api-project-0j0c.onrender.com/predict/", json=cors_data)
             response.raise_for_status()  # Will raise an HTTPError for bad responses
 
             # Extract and display prediction
