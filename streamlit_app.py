@@ -29,7 +29,7 @@ import plotly.express as px
 with st.sidebar:
     selected = option_menu(
         "Main Menu",
-        ["Home", "Page 1", "Page 2"],
+        ["Home", "A Guide to Coursera's Premier Data  Courses", "K-Means Clustering","Prediction page"],
         icons=["house", "file-earmark-text", "file-earmark-text"],
         menu_icon="cast",
         default_index=0,
@@ -39,7 +39,7 @@ if selected == "Home":
     st.title("Welcome to Home Page")
     st.write("This is the home page.")
 
-elif selected == "Page 1":
+elif selected == "A Guide to Coursera's Premier Data  Courses":
     st.title("Coursera Data Analysis")
     
     st.subheader("Univariate Analysis")
@@ -100,7 +100,11 @@ elif selected == "Page 1":
     
     #st.plotly_chart(fig_duration_top_courses)
     
-elif selected == "Page 2":
+elif selected == "K-Means Clustering":
+    st.title("K-Means Clustering")
+    
+   
+elif selected == "Prediction Page":
     st.title("Prediction Page")
     
     with st.form("prediction_form"):
