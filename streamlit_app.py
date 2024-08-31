@@ -102,8 +102,8 @@ elif selected == "A Guide to Coursera's Premier Data  Courses":
     
 elif selected == "K-Means Clustering":
     st.title("K-Means Clustering")
-    st.image("chart12.png")
-    st.image("chart12.png")
+    st.image("chart14.png")
+    st.image("chart15.png")
    
 elif selected == "Prediction":
     st.title("Prediction Page")
