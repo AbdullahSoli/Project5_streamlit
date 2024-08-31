@@ -68,7 +68,7 @@ elif selected == "Prediction":
     st.title("Prediction Page")
     
     with st.form("prediction_form"):
-        provider = st.text_input('Provider')
+        provider = st.selectbox('Level', ['IBM', 'Googel'])
         level = st.selectbox('Level', ['Beginner', 'Intermediate', 'Advanced', 'Mixed'])
         type_ = st.selectbox('Type', ['Professional Certificate', 'Specialization', 'Course'])
         duration_weeks = st.selectbox('Duration Range by Weeks', ['1 - 4', '4 - 12', '12 - 24'])
