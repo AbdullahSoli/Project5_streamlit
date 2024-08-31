@@ -58,11 +58,11 @@ elif selected == "A Guide to Coursera's Premier Data Courses":
 
 elif selected == "K-Means Clustering":
     st.title("K-Means Clustering")
-    #st.image("Silhouette Score")
-    st.image("Silhouette plot for the various cluster")
-    st.image("cluster_non_PCA")
-    st.image("Density")
-    st.image("distribution of clusters by provider")
+    st.image("Silhouette Score.png")
+    st.image("Silhouette plot for the various cluster.png")
+    st.image("cluster_non_PCA.png")
+    st.image("Density.png")
+    st.image("distribution of clusters by provider.png")
 
 elif selected == "Prediction":
     st.title("Prediction Page")
