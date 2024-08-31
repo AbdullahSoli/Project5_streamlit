@@ -102,7 +102,8 @@ elif selected == "A Guide to Coursera's Premier Data  Courses":
     
 elif selected == "K-Means Clustering":
     st.title("K-Means Clustering")
-    
+    st.image("chart12.png")
+    st.image("chart12.png")
    
 elif selected == "Prediction":
     st.title("Prediction Page")
@@ -112,11 +113,14 @@ elif selected == "Prediction":
         level = st.selectbox('Level', ['Beginner', 'Intermediate', 'Advanced', 'Mixed'])
         type_ = st.selectbox('Type', ['Professional Certificate', 'Specialization', 'Course'])
         duration_weeks = st.selectbox('Duration Range by Weeks', ['1 - 4', '4 - 12', '12 - 24'])
+        rating = st.selectbox('Rating', ['Excellent rating', 'Average rating', 'Above average rating', 'Low rating', 'Very low rating'])
+        reviews = st.number_input('Numbers of Reviews')
+
 
         submit_button = st.form_submit_button(label='Predict')
 
     if submit_button:
-        input_data = [[provider, level, type_, duration_weeks]]
+        input_data = [[provider, level, type_, duration_weeks, rating, reviews]]
         
         prediction = model.predict(input_data)
         
