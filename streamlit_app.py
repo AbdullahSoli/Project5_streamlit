@@ -86,7 +86,7 @@ elif selected == "Prediction":
 
         try:
             # Send data to FastAPI
-            response = requests.post("https://api-project-0j0c.onrender.com/predict/", json=cors_data)
+            response = requests.post("https://api-project-0j0c.onrender.com/predict", json=cors_data)
             response.raise_for_status()  # Will raise an HTTPError for bad responses
 
             # Extract and display prediction
