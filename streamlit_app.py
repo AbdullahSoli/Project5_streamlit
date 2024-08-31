@@ -16,14 +16,14 @@ fig_providers = px.histogram(df.nlargest(60, 'Reviews'), x='Provider', nbins=20,
 fig_levels = px.histogram(df, x='Level', nbins=20, title='Distribution of course Levels', color='Level', height=600)
 fig_reviews = px.histogram(df, x='Reviews', nbins=6, title='Distribution of Reviews', height=600)
 fig_types = px.histogram(df, x='Type', nbins=30, title='Distribution of course Types', color='Type', height=500)
-fig_duration = px.histogram(df, x='Duration / Weeks', nbins=20, title='Distribution of course Durations', color='Duration / Weeks', height=500)
+fig_duration = px.histogram(df, x='Duration', nbins=20, title='Distribution of course Durations', color='Duration', height=500)
 df_top_10 = df.sort_values(by='Reviews', ascending=False).head(10)
 fig_reviews_course = px.histogram(df_top_10, x='Course Title', y='Reviews', color='Course Title', title='Number of Reviews per Course', height=600)
-fig_duration_pie = px.pie(df['Duration / Weeks'].value_counts().reset_index(), names='index', values='Duration / Weeks', title='Distribution of Course Durations', width=1000, height=600)
+fig_duration_pie = px.pie(df['Duration'].value_counts().reset_index(), names='index', values='Duration', title='Distribution of Course Durations', width=1000, height=600)
 fig_type_provider = px.scatter(df[df['Provider'].isin(df['Provider'].value_counts().nlargest(10).index)], x='Type', y='Provider', color='Provider', title='Type of Course by Provider (Top 10 Providers by Count)', width=1000, height=600)
 fig_rating_provider = px.histogram(df[df['Provider'].isin(df['Provider'].value_counts().nlargest(5).index)], x='Provider', y='Reviews', title='Reviews VS Provider', color='Provider', height=600)
 fig_reviews_rating = px.scatter(df, x='Rating', y='Reviews', title='Number of Reviews by Rating', color='Rating')
-fig_duration_top_courses = px.scatter(df_top_10, x='Course Title', y='Duration / Weeks', title='Duration of Top 10 Courses', color='Duration / Weeks', height=600)
+fig_duration_top_courses = px.scatter(df_top_10, x='Course Title', y='Duration', title='Duration of Top 10 Courses', color='Duration / Weeks', height=600)
 
 # Streamlit layout
 with st.sidebar:
