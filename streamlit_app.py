@@ -8,7 +8,7 @@ import plotly.express as px
 #model = joblib.load('your_model.joblib')
 
 # Load the data
-df = pd.read_csv("coursera_dataset.csv")
+df = pd.read_csv("coursera_dataset2.csv")
 
 # Create plots
 fig_ratings = px.histogram(df, x='Rating', nbins=20, title='Distribution of Ratings', height=600)
