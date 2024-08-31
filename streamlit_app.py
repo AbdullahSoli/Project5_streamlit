@@ -81,7 +81,7 @@ elif selected == "Prediction":
             "Provider": provider,
             "Level": level,
             "Type": type_,
-            "Duration / Weeks": duration_weeks
+           "Duration_Weeks": duration_weeks
         }
 
         try:
