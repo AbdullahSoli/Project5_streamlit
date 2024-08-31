@@ -8,7 +8,7 @@ import plotly.express as px
 #model = joblib.load('your_model.joblib')
 
 # Load the data
-df = pd.read_csv("cleaned_coursera_dataset2.csv")
+#df = pd.read_csv("cleaned_coursera_dataset2.csv")
 
 # Create plots
 #fig_ratings = px.histogram(df, x='Rating', nbins=20, title='Distribution of Ratings', height=600)
@@ -51,53 +51,54 @@ elif selected == "Page 1":
     st.image("chart2.png")
     st.write("IBM demonstrates its expertise by offering courses across a wide range of tracks.")
     
-    st.plotly_chart(fig_levels)
+    #st.plotly_chart(fig_levels)
+    st.image("chart3.png")
     st.write("We can indicate that most Coursera users are beginners.")
     
     #st.plotly_chart(fig_reviews)
-    st.image("chart3.png")
+    st.image("chart4.png")
     st.write("Most of the course ratings fall between 0 and 50k.")
     
     #st.plotly_chart(fig_types)
-    st.image("chart4.png")
+    st.image("chart5.png")
     st.write("Since most users are beginners, the courses have the highest enrollment numbers.")
     
     #st.plotly_chart(fig_duration)
-    st.image("chart5.png")
+    st.image("chart6.png")
     st.write("Users prefer to take courses that do not exceed three months in duration.")
     
     st.subheader("Bivariate/Multivariate Analysis")
     
     st.write("**Chart 1: Level vs. Type**")
     #st.pyplot(plt.figure().add_subplot(111).bar(df.groupby(['Type', 'Level']).size().unstack(fill_value=0).index, df.groupby(['Type', 'Level']).size().unstack(fill_value=0).values))
-    st.image("chart6.png")
+    st.image("chart7.png")
     st.write("The chart shows a dominant focus on 'Beginner' level courses in 'Course' and 'Specialization' types.")
     
     #st.plotly_chart(fig_provider_rating)
-    st.image("chart7.png")
+    st.image("chart8.png")
     st.write("Most IBM enrollees have liked the courses.")
     
     #st.plotly_chart(fig_reviews_course)
-    st.image("chart8.png")
+    st.image("chart9.png")
     st.write("The 'Python for Everybody' course has the highest number of reviews, indicating its popularity among learners compared to other courses.")
     
     #st.plotly_chart(fig_duration_pie)
-    st.image("chart9.png")
+    st.image("chart10.png")
     st.write("A three-month period is the most preferred duration for courses.")
     
     #st.plotly_chart(fig_type_provider)
-    st.image("chart10.png")
+    st.image("chart11.png")
     st.write("Professional certificates are not offered by many companies.")
     
     #st.plotly_chart(fig_rating_provider)
-    st.image("chart11.png")
+    st.image("chart12.png")
     st.write("Most of the top providers by reviews are universities.")
     
     #st.plotly_chart(fig_reviews_rating)
     st.image("chart12.png")
     st.write("The majority of courses on Coursera have high ratings.")
     
-    st.plotly_chart(fig_duration_top_courses)
+    #st.plotly_chart(fig_duration_top_courses)
     
 elif selected == "Page 2":
     st.title("Prediction Page")
