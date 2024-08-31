@@ -105,8 +105,8 @@ elif selected == "Page 2":
     
     with st.form("prediction_form"):
         provider = st.text_input('Provider')
-        level = st.selectbox('Level', ['Beginner', 'Intermediate', 'Advanced'])
-        type_ = st.selectbox('Type', ['Online', 'In-Person'])
+        level = st.selectbox('Level', ['Beginner', 'Intermediate', 'Advanced', 'Mixed'])
+        type_ = st.selectbox('Type', ['Professional Certificate', 'Specialization', 'Course'])
         duration_weeks = st.number_input('Duration / Weeks', min_value=1, max_value=52)
 
         submit_button = st.form_submit_button(label='Predict')
