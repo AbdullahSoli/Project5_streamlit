@@ -29,7 +29,7 @@ import plotly.express as px
 with st.sidebar:
     selected = option_menu(
         "Main Menu",
-        ["Home", "A Guide to Coursera's Premier Data  Courses", "K-Means Clustering","Prediction page"],
+        ["Home", "A Guide to Coursera's Premier Data  Courses", "K-Means Clustering","Prediction"],
         icons=["house", "file-earmark-text", "file-earmark-text"],
         menu_icon="cast",
         default_index=0,
@@ -104,7 +104,7 @@ elif selected == "K-Means Clustering":
     st.title("K-Means Clustering")
     
    
-elif selected == "Prediction Page":
+elif selected == "Prediction":
     st.title("Prediction Page")
     
     with st.form("prediction_form"):
