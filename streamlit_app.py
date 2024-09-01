@@ -31,8 +31,14 @@ if selected == "Home":
                    """)
 
 elif selected == "A Guide to Coursera's Premier Data Courses":
-    st.title("Coursera Data Analysis")
-    
+    st.title("Coursera EDA Analysis")
+    st.write("""
+                 In this analysis, we delve into the characteristics and trends of Coursera courses through various levels of examination. 
+                 Our univariate analysis explores individual aspects such as course ratings, enrollment numbers, and user preferences regarding course duration. 
+                 By visualizing data through multiple charts, we uncover key insights about the general quality and distribution of Coursera courses. Moving on to bivariate and multivariate analysis, 
+                 we investigate the relationships between different factors such as course levels, types, and user feedback. 
+                 This deeper analysis sheds light on the patterns and preferences of Coursera users and the performance of different course providers.
+                   """)
     st.subheader("Univariate Analysis")
     st.image("img/chart1.png")
     st.write("Most Coursera courses have ratings between 4 and 5, indicating that it is a valuable platform for taking courses.")
@@ -63,6 +69,13 @@ elif selected == "A Guide to Coursera's Premier Data Courses":
     st.write("Most of the top providers by reviews are universities.")
     st.image("img/chart12.png")
     st.write("The majority of courses on Coursera have high ratings.")
+
+st.write("""
+                Our analysis reveals that Coursera is a platform highly favored by users, particularly beginners, who tend to prefer shorter courses with high ratings. 
+                The insights from our univariate and bivariate/multivariate analyses highlight the dominance of beginner-level courses and the significant role of established institutions like IBM and universities in providing quality education. 
+                Additionally, the preference for shorter course durations and the high ratings across most courses underscore the effectiveness of Coursera's offerings. 
+                This comprehensive examination provides valuable information for users seeking to make informed decisions about their course selections and for providers aiming to optimize their course offerings.
+                   """)
 
 elif selected == "K-Means Clustering":
     st.title("K-Means Clustering")
