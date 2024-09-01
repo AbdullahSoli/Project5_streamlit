@@ -11,7 +11,7 @@ import requests
 # Streamlit layout with sidebar menu
 with st.sidebar:
     selected = option_menu(
-        "Main Menu",
+        "",
         ["Home", "A Guide to Coursera's Premier Data Courses", "K-Means Clustering", "Prediction"],
         icons=["house", "file-earmark-text", "file-earmark-text"],
         menu_icon="cast",
@@ -27,6 +27,7 @@ Following the clustering process, we performed an in-depth analysis of the resul
 
 Our findings provide a clearer understanding of the course offerings on Coursera and can be used to make informed decisions regarding course selection and future recommendations.
 """)
+
 elif selected == "A Guide to Coursera's Premier Data Courses":
     st.title("Coursera Data Analysis")
     
