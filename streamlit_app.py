@@ -84,14 +84,14 @@ elif selected == "Prediction":
            "duration_Weeks": duration_weeks
         }
 
-       # try:
-            # Send data to FastAPI
-            #response = requests.post("https://api-project-0j0c.onrender.com/predict", json=cors_data)
-            #response.raise_for_status()  # Will raise an HTTPError for bad responses
+        try:
+             Send data to FastAPI
+            response = requests.post("https://api-project-0j0c.onrender.com/predict", json=cors_data)
+            response.raise_for_status()  # Will raise an HTTPError for bad responses
 
-            # Extract and display prediction
-            #prediction = response.json().get("prediction", "No prediction found")
-            #st.write(f"Prediction: {prediction}")
+             Extract and display prediction
+            prediction = response.json().get("prediction", "No prediction found")
+            st.write(f"Prediction: {prediction}")
             
-        #except requests.exceptions.RequestException as e:
-            #st.error(f"An error occurred: {e}")
+        except requests.exceptions.RequestException as e:
+            st.error(f"An error occurred: {e}")
