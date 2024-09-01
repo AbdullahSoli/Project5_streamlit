@@ -30,7 +30,7 @@ if selected == "Home":
                   Our findings provide a clearer understanding of the course offerings on Coursera and can be used to make informed decisions regarding course selection and future recommendations.
                    """)
 
- elif selected == "A Guide to Coursera's Premier Data Courses":
+elif selected == "A Guide to Coursera's Premier Data Courses":
     st.title("Coursera Data Analysis")
     
     st.subheader("Univariate Analysis")
