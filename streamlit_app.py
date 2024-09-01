@@ -68,7 +68,7 @@ elif selected == "Prediction":
     st.title("Prediction Page")
     
     with st.form("prediction_form"):
-        provider = st.selectbox('Level', ['IBM', 'Googel'])
+        provider = st.selectbox('provider', ['IBM', 'Googel'])
         level = st.selectbox('Level', ['Beginner', 'Intermediate', 'Advanced', 'Mixed'])
         type_ = st.selectbox('Type', ['Professional Certificate', 'Specialization', 'Course'])
         duration_weeks = st.selectbox('Duration Range by Weeks', ['1 - 4', '4 - 12', '12 - 24'])
@@ -84,14 +84,14 @@ elif selected == "Prediction":
            "duration_Weeks": duration_weeks
         }
 
-        try:
+       # try:
             # Send data to FastAPI
-            response = requests.post("https://api-project-0j0c.onrender.com/predict", json=cors_data)
-            response.raise_for_status()  # Will raise an HTTPError for bad responses
+            #response = requests.post("https://api-project-0j0c.onrender.com/predict", json=cors_data)
+            #response.raise_for_status()  # Will raise an HTTPError for bad responses
 
             # Extract and display prediction
-            prediction = response.json().get("prediction", "No prediction found")
-            st.write(f"Prediction: {prediction}")
+            #prediction = response.json().get("prediction", "No prediction found")
+            #st.write(f"Prediction: {prediction}")
             
-        except requests.exceptions.RequestException as e:
-            st.error(f"An error occurred: {e}")
+        #except requests.exceptions.RequestException as e:
+            #st.error(f"An error occurred: {e}")
