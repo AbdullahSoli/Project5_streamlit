@@ -26,7 +26,7 @@ elif selected == "A Guide to Coursera's Premier Data Courses":
     st.title("Coursera Data Analysis")
     
     st.subheader("Univariate Analysis")
-    st.image("chart1.png")
+    st.image("img/chart1.png")
     st.write("Most Coursera courses have ratings between 4 and 5, indicating that it is a valuable platform for taking courses.")
     st.image("chart2.png")
     st.write("IBM demonstrates its expertise by offering courses across a wide range of tracks.")
