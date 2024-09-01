@@ -70,7 +70,7 @@ elif selected == "A Guide to Coursera's Premier Data Courses":
     st.image("img/chart12.png")
     st.write("The majority of courses on Coursera have high ratings.")
 
-st.write("""
+    st.write("""
                 Our analysis reveals that Coursera is a platform highly favored by users, particularly beginners, who tend to prefer shorter courses with high ratings. 
                 The insights from our univariate and bivariate/multivariate analyses highlight the dominance of beginner-level courses and the significant role of established institutions like IBM and universities in providing quality education. 
                 Additionally, the preference for shorter course durations and the high ratings across most courses underscore the effectiveness of Coursera's offerings. 
