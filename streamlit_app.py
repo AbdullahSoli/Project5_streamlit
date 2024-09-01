@@ -12,7 +12,7 @@ import requests
 with st.sidebar:
     selected = option_menu(
         "",
-        ["Home", "A Guide to Coursera's Premier Data Courses", "K-Means Clustering", "Prediction"],
+        ["Home", "A Guide to Coursera's Premier Data Courses",  "Prediction"],
         icons=["house", "file-earmark-text", "file-earmark-text"],
         menu_icon="cast",
         default_index=0,
@@ -85,13 +85,13 @@ elif selected == "A Guide to Coursera's Premier Data Courses":
                 This comprehensive examination provides valuable information for users seeking to make informed decisions about their course selections and for providers aiming to optimize their course offerings.
                    """)
 
-elif selected == "K-Means Clustering":
-    st.title("K-Means Clustering")
-    st.image("img/Silhouette Score.png")
-    st.image("img/Silhouette plot for the various cluster.png")
-    st.image("img/cluster_non_PCA.png")
-    st.image("img/Density.png")
-    st.image("img/distribution of clusters by provider.png")
+#elif selected == "K-Means Clustering":
+ #   st.title("K-Means Clustering")
+  #  st.image("img/Silhouette Score.png")
+   # st.image("img/Silhouette plot for the various cluster.png")
+    #st.image("img/cluster_non_PCA.png")
+   # st.image("img/Density.png")
+    #st.image("img/distribution of clusters by provider.png")
 
 elif selected == "Prediction":
     
