@@ -20,8 +20,13 @@ with st.sidebar:
 
 if selected == "Home":
     st.title("Analyzing and Categorizing Coursera Data Courses Using K-means Clustering")
-   st.write("In this project, we conducted a comprehensive analysis of data courses available on the Coursera platform. We developed a machine learning model using the K-means clustering algorithm to categorize the courses into distinct groups based on their features. Following the clustering process, we performed an in-depth analysis of the resulting clusters to uncover patterns and trends. We extracted valuable insights from the clustered data, which helped us understand the distribution and characteristics of different courses. Additionally, we explored how various factors influence course categorization and identified key attributes that drive clustering results. Our findings provide a clearer understanding of the course offerings on Coursera and can be used to make informed decisions regarding course selection and future recommendations.")
+st.write("""
+In this project, we conducted a comprehensive analysis of data courses available on the Coursera platform. We developed a machine learning model using the K-means clustering algorithm to categorize the courses into distinct groups based on their features.
 
+Following the clustering process, we performed an in-depth analysis of the resulting clusters to uncover patterns and trends. We extracted valuable insights from the clustered data, which helped us understand the distribution and characteristics of different courses. Additionally, we explored how various factors influence course categorization and identified key attributes that drive clustering results.
+
+Our findings provide a clearer understanding of the course offerings on Coursera and can be used to make informed decisions regarding course selection and future recommendations.
+""")
 elif selected == "A Guide to Coursera's Premier Data Courses":
     st.title("Coursera Data Analysis")
     
