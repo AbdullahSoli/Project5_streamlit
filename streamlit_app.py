@@ -17,6 +17,14 @@ with st.sidebar:
         menu_icon="cast",
         default_index=0,
     )
+def get_readable_result(prediction):
+    result = {
+                0:"Not a popular course, not recommended", 
+                1: "This is a popular course, recommended!", 
+                2: "Average popularity, could be useful",
+                }
+    
+    return result[prediction]
 
 if selected == "Home":
     st.title("Analyzing and Categorizing Coursera Data Courses Using K-means Clustering")
@@ -86,33 +94,36 @@ elif selected == "K-Means Clustering":
     st.image("img/distribution of clusters by provider.png")
 
 elif selected == "Prediction":
+    
     st.title("Prediction Page")
     
     with st.form("prediction_form"):
-        provider = st.selectbox('provider', ['IBM', 'Googel'])
-        level = st.selectbox('Level', ['Beginner', 'Intermediate', 'Advanced', 'Mixed'])
-        type_ = st.selectbox('Type', ['Professional Certificate', 'Specialization', 'Course'])
-        duration_weeks = st.selectbox('Duration Range by Weeks', ['1 - 4', '4 - 12', '12 - 24'])
+        rating = st.number_input("Rating (1-5):", min_value=0.0)
+        reviews = st.number_input("Total Reviews:", min_value=0)
+        duration_weeks = st.number_input("Duration in weeks:", min_value=0)
 
         submit_button = st.form_submit_button(label='Predict')
 
     if submit_button:
+
         # Prepare data to send to FastAPI
         cors_data = {
-            "provider": provider,
-            "level": level,
-            "type": type_,
-           "duration_Weeks": duration_weeks
+            "rating": rating,
+            "reviews": reviews,
+           "duration_weeks": duration_weeks
         }
 
-        #try:
-        #     Send data to FastAPI
-         #   response = requests.post("https://api-project-0j0c.onrender.com/predict", json=cors_data)
-          #  response.raise_for_status()  # Will raise an HTTPError for bad responses
+        try:
+            # Send data to FastAPI
+            response = requests.post("https://team-pirates-project-5.onrender.com/predict/", json=cors_data)
+            response.raise_for_status()  # Will raise an HTTPError for bad responses
 
-           #  Extract and display prediction
-            #prediction = response.json().get("prediction", "No prediction found")
-            #st.write(f"Prediction: {prediction}")
+            # Extract and display prediction
+            prediction = response.json().get("prediction", "No prediction found")
+
+            prediction = get_readable_result(prediction)
+
+            st.write(f"Prediction: {prediction}")
             
-        #except requests.exceptions.RequestException as e:
-         #   st.error(f"An error occurred: {e}")
+        except requests.exceptions.RequestException as e:
+            st.error(f"An error occurred: {e}")
